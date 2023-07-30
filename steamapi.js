@@ -4,7 +4,7 @@ const key = process.env.STEAM_KEY;
 const axios = require('axios');
 const steam_api = "http://api.steampowered.com/ISteamUserStats";
 
-axios.defaults.timeout = 1000;
+axios.defaults.timeout = 30000;
 
 
 async function httpGet(URL) {
