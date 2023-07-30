@@ -3,5 +3,9 @@ extends layout.pug
 block conteudo
     h1 Lista
     p Lista de conquistas
-    p #{conquista.id} - #{conquista.nome}
-    p #{conquista.desc}
+
+    div(class='conquista')
+        each achievement in gameAchievements
+            img(src=achievement.icon)
+            p #{achievement.displayName} 
+            p #{achievement.description}
