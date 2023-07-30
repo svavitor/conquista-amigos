@@ -9,7 +9,7 @@ axios.defaults.timeout = 30000;
 
 async function httpGet(URL) {
     let data;
-    await axios.get(URL)
+    await axios.get(URL, { timeout: 30000})
         .then(function (response) {
             //console.log(response.data)
             data = response.data;
