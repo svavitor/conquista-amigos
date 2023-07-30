@@ -1,11 +1,6 @@
 extends layout.pug
 
 block conteudo
-    h1 Lista
-    p Lista de conquistas
-
-    div(class='conquista')
-        each achievement in gameAchievements
-            img(src=achievement.icon)
-            p #{achievement.displayName} 
-            p #{achievement.description}
+    div(class="row")
+        each player in players
+            include player.pug
