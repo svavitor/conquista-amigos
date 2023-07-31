@@ -1,11 +1,23 @@
 * {
     box-sizing: border-box;
-    background-color: rgb(24, 20, 32);
     color: rgb(230, 207, 252);
+}
+
+body {
+    background-color: rgb(24, 20, 32);
 }
 
 .row {
     display: flex;
+}
+
+th {
+    background-color: rgb(49, 44, 59);
+    padding: 8px;
+}
+
+td {
+    background-color: rgb(42, 35, 56);
 }
 
 .column {
@@ -19,10 +31,12 @@
 
 .conquistaTitulo {
     margin: 1px;
+    padding-left: 8px;
     font-size: 16px;
 }
 
 .conquistaDesc {
     margin: 1px;
+    padding-left: 8px;
     font-size: 12px;
 }
