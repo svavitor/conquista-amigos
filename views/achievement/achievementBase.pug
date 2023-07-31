@@ -1,9 +1,9 @@
 tr 
     td 
         if player.achievements[index].achieved === 1
-            img(src=achievement.icon)
+            img(src=achievement.icon, class="imgConquista")
         else 
-            img(src=achievement.icongray)
+            img(src=achievement.icongray, class="imgConquista")
     td
         p #{achievement.displayName}
         p #{achievement.description}
