@@ -10,7 +10,7 @@ const players = [
     {"nome": "twist","steamid": "76561198074458381"},
     {"nome": "Kuro","steamid": "76561198016665594"},
     {"nome": "Cone","steamid": "76561198069575376"},
-    //{"nome": "Fayt","steamid": "76561198081399729"},
+    {"nome": "Fayt","steamid": "76561198081399729"},
     {"nome": "Lyn","steamid": "76561198075737081"}
 ];
 
@@ -19,7 +19,7 @@ players.forEach((player) => {
         .then(res => { 
             return { 
                 nome: player.nome, 
-                achievements: res.playerstats.achievements 
+                achievements: res?.playerstats.achievements 
             }});
     promiseList.push(novaProm);
 });

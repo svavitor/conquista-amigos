@@ -6,22 +6,19 @@ const steam_api = "http://api.steampowered.com/ISteamUserStats";
 
 axios.defaults.timeout = 30000;
 
-
 async function httpGet(URL) {
     let data;
     await axios.get(URL, { timeout: 30000})
         .then(function (response) {
-            //console.log(response.data)
             data = response.data;
         })
         .catch(function (error) {
-            console.log(error);
+            console.log(`Erro: ${error.response.status} - ${error.code}`);
         })
         .finally(function () {
         });
     return data;
 }
-
 
 function getPlayerAchievements(gameid, steamid) {
     let url = `${steam_api}/GetPlayerAchievements/v0001/?appid=${gameid}&key=${key}&steamid=${steamid}`;

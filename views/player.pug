@@ -1,7 +1,8 @@
-div(class="column")
-    table
-        tr
-            th #
-            th #{player.nome}
-        each achievement, index in gameAchievements
-            include achievement/achievementBase.pug
+if player.achievements
+    div(class="column")
+        table
+            tr
+                th #
+                th #{player.nome}
+            each achievement, index in gameAchievements
+                include achievement/achievementBase.pug
