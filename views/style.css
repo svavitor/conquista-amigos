@@ -14,3 +14,13 @@
 .imgConquista {
     transform: scale(0.7);
 }
+
+.conquistaTitulo {
+    margin: 1px;
+    font-size: 16px;
+}
+
+.conquistaDesc {
+    margin: 1px;
+    font-size: 12px;
+}
