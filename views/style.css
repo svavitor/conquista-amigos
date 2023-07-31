@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    background-color: rgb(24, 20, 32);
+    color: rgb(230, 207, 252);
 }
 
 .row {
