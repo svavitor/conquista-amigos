@@ -36,4 +36,4 @@ function getPlayerSummaries(steamids){
 }
 
 
-module.exports = { getPlayerAchievements, getSchemaForGame};
+module.exports = { getPlayerAchievements, getSchemaForGame, getPlayerSummaries};
