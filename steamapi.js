@@ -30,4 +30,10 @@ function getSchemaForGame(gameid){
     return httpGet(url);
 }
 
+function getPlayerSummaries(steamids){
+    let url = `http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0001/?key=${key}&steamids=${steamids}`
+    return httpGet(url);
+}
+
+
 module.exports = { getPlayerAchievements, getSchemaForGame};
