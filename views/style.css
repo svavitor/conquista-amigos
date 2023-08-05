@@ -7,6 +7,10 @@ body {
     background-color: rgb(24, 20, 32);
 }
 
+textarea {
+    color: black;
+}
+
 .row {
     display: flex;
 }
