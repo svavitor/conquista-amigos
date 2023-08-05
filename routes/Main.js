@@ -31,23 +31,28 @@ router.get("/", async (request,response) => {
     promiseList = [];
 
     let steamIds = request.cookies.amgSteamIds;
-
-    steamIds = steamIds.replaceAll('\r\n',',');
-
-    await getPlayerSummaries(steamIds).then(async res => {
-        players = res.response.players.player;
-        pegaPlayers(players);
-    });
     
-    await getSchemaForGame('548430').then(res => {
-        gameAchievements = res.game.availableGameStats.achievements;
-    });
+    if(steamIds){
+        steamIds = steamIds.replaceAll('\r\n',',');
+        await getPlayerSummaries(steamIds).then(async res => {
+            players = res.response.players.player;
+            pegaPlayers(players);
+        });
+        
+        await getSchemaForGame('548430').then(res => {
+            gameAchievements = res.game.availableGameStats.achievements;
+        });
 
-    Promise.all(promiseList)
+        Promise.all(promiseList)
         .then(valores => {
             response.render('index', { gameAchievements , players: valores });
         })
-        .catch(() => response.send("Nenhum player cadastrado entre em /config."));
+        .catch(() => response.send("Nenhum player cadastrado entre em <a href='/config'> config </a>."));
+
+    } else {
+        response.send("Nenhum player cadastrado entre em <a href='/config'> config </a>.");
+    }
+
 });
 
 module.exports = router;
