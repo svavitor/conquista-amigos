@@ -36,6 +36,7 @@ td {
 
 .imgConquistaGray {
     filter: grayscale(100%) blur(1px);
+    opacity: 0.6;
 }
 
 .conquistaTitulo {
