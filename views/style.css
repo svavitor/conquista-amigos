@@ -29,8 +29,14 @@ td {
     padding: 5px;
 }
 
+.imgConquistaGray,
 .imgConquista {
     transform: scale(0.7);
+}
+
+.imgConquistaGray {
+    filter: grayscale(100%) blur(1px);
+    opacity: 0.6;
 }
 
 .conquistaTitulo {
