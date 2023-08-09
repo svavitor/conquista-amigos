@@ -64,3 +64,11 @@ td {
 .menuItem {
     padding: 14px;
 }
+
+form {
+    display: inline;
+}
+
+input[type=submit] {
+    color: black;
+}

@@ -5,6 +5,7 @@ const router = express.Router();
 let gameAchievements;
 
 let promiseList = [];
+let gameId = '548430';
 
 let players = [
     //{"nome": "twist","steamid": "76561198074458381"},
@@ -16,7 +17,7 @@ let players = [
 
 function pegaPlayers(players){
     players.forEach((player) => {
-        let novaProm = getPlayerAchievements('548430', player?.steamid)
+        let novaProm = getPlayerAchievements(gameId, player?.steamid)
             .then(res => { 
                 return { 
                     nome: player.personaname, 
@@ -26,10 +27,17 @@ function pegaPlayers(players){
     });
 }
 
-router.get("/", async (request,response) => {
+router.post("/", (request, response) => {
+    gameId = request.body.gameSearch;
+    console.log(gameId);
+    response.redirect('/');
+});
+
+router.get("/", async (request, response) => {
     players = [];
     promiseList = [];
 
+    
     let steamIds = request.cookies.amgSteamIds;
     
     if(steamIds){
@@ -39,9 +47,10 @@ router.get("/", async (request,response) => {
             pegaPlayers(players);
         });
         
-        await getSchemaForGame('548430').then(res => {
+        await getSchemaForGame(gameId).then(res => {
+            
             gameAchievements = res.game.availableGameStats.achievements;
-        });
+        }).catch(() => response.render('erro'));
 
         Promise.all(promiseList)
         .then(valores => {

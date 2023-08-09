@@ -1,3 +1,9 @@
 div(class="navbar")
+    form(action="/", method="post") 
+        label(for="gameSearch") GameId: 
+        input(type="search", name="gameSearch" id="gameSearch")
+        input(type="submit", value="Buscar")
+
     a(href="/" class="menuItem") Início
     a(href="config" class="menuItem") Configuração
+    
