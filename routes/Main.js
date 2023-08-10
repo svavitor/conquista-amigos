@@ -7,13 +7,7 @@ let gameAchievements;
 let promiseList = [];
 let gameId = '548430';
 
-let players = [
-    //{"nome": "twist","steamid": "76561198074458381"},
-    //{"nome": "Kuro","steamid": "76561198016665594"},
-    //{"nome": "Cone","steamid": "76561198069575376"},
-   // {"nome": "Fayt","steamid": "76561198081399729"},
-  //  {"nome": "Lyn","steamid": "76561198075737081"}
-];
+let players = [];
 
 function pegaPlayers(players){
     players.forEach((player) => {
@@ -34,14 +28,15 @@ router.post("/", (request, response) => {
 });
 
 router.get("/", async (request, response) => {
+
     players = [];
     promiseList = [];
-
     
     let steamIds = request.cookies.amgSteamIds;
     
     if(steamIds){
         steamIds = steamIds.replaceAll('\r\n',',');
+
         await getPlayerSummaries(steamIds).then(async res => {
             players = res.response.players.player;
             pegaPlayers(players);
