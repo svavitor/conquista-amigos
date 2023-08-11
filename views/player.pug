@@ -3,6 +3,8 @@ if player.achievements
         table
             tr
                 th #
-                th #{player.nome}
+                th 
+                    img(src=player.avatar, alt="")  
+                    a(href=player.profileurl) #{player.nome}
             each achievement, index in gameAchievements
                 include achievement/achievementBase.pug

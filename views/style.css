@@ -18,7 +18,13 @@ textarea {
 
 th {
     background-color: rgb(49, 44, 59);
-    padding: 8px;
+    padding: 12px 10px 10px 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th > img{
+    float: left;
 }
 
 td {

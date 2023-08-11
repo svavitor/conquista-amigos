@@ -14,7 +14,9 @@ function pegaPlayers(players){
         let novaProm = getPlayerAchievements(gameId, player?.steamid)
             .then(res => { 
                 return { 
-                    nome: player.personaname, 
+                    nome: player.personaname,
+                    profileurl: player.profileurl,
+                    avatar: player.avatar,
                     achievements: res?.playerstats.achievements 
                 }});
         promiseList.push(novaProm);
