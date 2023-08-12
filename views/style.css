@@ -31,6 +31,11 @@ td {
     background-color: rgb(42, 35, 56);
 }
 
+tbody {
+    min-width: 400px;
+    display: inline-block;
+}
+
 .column {
     flex: 50%;
     padding: 5px;
