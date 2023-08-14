@@ -67,9 +67,16 @@ tbody {
     padding: 14px;
     margin: 0px;
     height: 50px;
-    width: auto;
+    width: 100%;
     border-bottom: 1px solid black;
-    text-align: right;
+    text-align: left;
+    position: fixed;
+    background-color: rgb(24, 20, 32);
+    z-index:9000;
+}
+
+.conteudo {
+    padding-top: 55px;
 }
 
 .menuItem {
