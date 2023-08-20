@@ -1,11 +1,12 @@
 extends ../layout.pug
 
 block conteudo
-    h1 Configuração
-    form(action="" method="POST")
-        label Player IDs:
-        br
-        br
-        textarea(name="steamids", cols="30", rows="10", id='steamids') #{steamIds}
-        br
-        input(type='submit' value='Cadastrar' class='forButton')
+    div(class="conteudo")
+        h1 Configuração
+        form(action="" method="POST")
+            label Player IDs:
+            br
+            br
+            textarea(name="steamids", cols="30", rows="10", id='steamids') #{steamIds}
+            br
+            input(type='submit' value='Cadastrar' class='forButton')
