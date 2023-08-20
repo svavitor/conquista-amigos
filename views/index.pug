@@ -2,6 +2,9 @@ extends layout.pug
 
 block conteudo
     div(class="conteudo")
-        div(class="row")
-            each player in players
-                include player.pug
+        p #{msg}
+        if players != null
+            div(class="row")
+                each player in players
+                    if player
+                        include player.pug

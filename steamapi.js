@@ -14,8 +14,7 @@ async function httpGet(URL) {
         })
         .catch(function (error) {
             console.log(`Erro: ${error.response.status} - ${error.code}`);
-        })
-        .finally(function () {
+            return data = null;
         });
     return data;
 }
