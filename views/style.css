@@ -90,3 +90,7 @@ form {
 input[type=submit] {
     color: black;
 }
+
+.escondeConquista {
+    display: none;
+}

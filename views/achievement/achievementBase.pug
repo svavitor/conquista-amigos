@@ -1,4 +1,4 @@
-tr 
+tr(id='linha'+index onclick='hideLine("linha'+index+'")') 
     td 
         if player.achievements[index].achieved === 1
             img(src=achievement.icon, class="imgConquista")
@@ -7,4 +7,3 @@ tr
     td
         p(class="conquistaTitulo") #{achievement.displayName}
         p(class="conquistaDesc") #{achievement.description}
-

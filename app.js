@@ -8,6 +8,7 @@ const configRoute = require('./routes/Config');
 
 const app = express();
 
+app.use(express.static('public'))
 app.set('view engine', 'pug');
 
 app.use(cookieParser());
