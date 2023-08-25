@@ -92,5 +92,49 @@ input[type=submit] {
 }
 
 .escondeConquista {
+    height: 20px;
+}
+
+.invBox {
+    height: 20px;
+}
+
+.tabImg {
+    height: 60px;
+    width:  60px;
+}
+
+.tabDesc {
+    min-width: 400px;
+}
+
+.hideImg {
+    height: 13px;
+    width:  60px;
+    background-color: rgb(26, 37, 33);
+    opacity: 60%;
+    margin: 1px;
+}
+
+.hideDesc{
+    min-width: 400px;
+    background-color: rgb(26, 37, 33);
+    opacity: 60%;
+    text-align: center;
+    font-size: 8px;
+    margin: 1px;
+}
+
+.linhaHide {
     display: none;
+    
+}
+
+.showImg {
+    height: 12px;
+    width:  60px;
+}
+
+.showDesc{
+    min-width: 400px;
 }

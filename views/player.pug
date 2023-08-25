@@ -2,8 +2,8 @@ if player.achievements
     div(class="column")
         table
             tr
-                th #
-                th 
+                th(class='tabImg') #
+                th(class='tabDesc') 
                     img(src=player.avatar, alt="")  
                     a(href=player.profileurl) #{player.nome}
             each achievement, index in gameAchievements

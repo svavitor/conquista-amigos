@@ -14,7 +14,7 @@ function pegaPlayers(players){
     players.forEach((player) => {
         let novaProm = getPlayerAchievements(gameId, player?.steamid)
             .then(res => {
-                console.log(player) 
+                //console.log(player) 
                 if(!player) {
                     mensagem += 'SteamId inválida. ';
                 }

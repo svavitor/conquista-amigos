@@ -1,9 +1,20 @@
-tr(id='linha'+index onclick='hideLine("linha'+index+'")') 
-    td 
+
+
+
+
+
+
+tr(id='inv'+index onclick='showLine("'+index+'")' class='linhaHide')
+    td(class='hideImg')
+        span
+    td(class='hideDesc')
+        span < >
+tr(id='linha'+index onclick='hideLine("'+index+'")')
+    td(class='showImg')
         if player.achievements[index].achieved === 1
             img(src=achievement.icon, class="imgConquista")
         else 
             img(src=achievement.icon, class="imgConquistaGray")
-    td
+    td(class='showDesc')
         p(class="conquistaTitulo") #{achievement.displayName}
         p(class="conquistaDesc") #{achievement.description}

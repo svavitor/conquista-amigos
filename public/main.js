@@ -1,4 +1,9 @@
 function hideLine(id){
-    document.querySelectorAll('#'+id).forEach(ele => ele.style.display = "none");
-    //document.getElementById(id).style.visibility = "visible";   
+    document.querySelectorAll('#linha'+id).forEach(ele => ele.style.display = "none");
+    document.querySelectorAll('#inv'+id).forEach(ele => ele.style.display = "Flex");
+}
+
+function showLine(id){
+    document.querySelectorAll('#linha'+id).forEach(ele => ele.style.display = "");
+    document.querySelectorAll('#inv'+id).forEach(ele => ele.style.display = "none");
 }
