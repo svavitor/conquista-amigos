@@ -18,7 +18,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', mainRoute);
 app.use('/config', configRoute);
 
-
 app.listen(process.env.PORT || 3000, () =>{
     console.log(`Executando em http://localhost:${process.env.PORT || 3000}/.`);
 });
