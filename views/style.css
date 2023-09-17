@@ -92,7 +92,7 @@ input[type=submit] {
 }
 
 .escondeConquista {
-    height: 20px;
+    height: 40px;
 }
 
 .invBox {
@@ -109,11 +109,14 @@ input[type=submit] {
 }
 
 .hideImg {
-    height: 13px;
-    width:  60px;
     background-color: rgb(26, 37, 33);
     opacity: 60%;
-    margin: 1px;
+    display: table-cell;
+    text-align: center;
+}
+
+.hideImg > img {
+    width: 55%;
 }
 
 .hideDesc{
@@ -121,7 +124,7 @@ input[type=submit] {
     background-color: rgb(26, 37, 33);
     opacity: 60%;
     text-align: center;
-    font-size: 8px;
+    font-size: 12px;
     margin: 1px;
 }
 
