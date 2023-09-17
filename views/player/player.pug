@@ -7,4 +7,4 @@ if player.achievements
                     img(src=player.avatar, alt="")  
                     a(href=player.profileurl) #{player.nome}
             each achievement, index in gameAchievements
-                include achievementBase.pug
+                include achievement.pug
