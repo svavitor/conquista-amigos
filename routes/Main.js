@@ -39,11 +39,11 @@ router.get("/", async (request, response) => {
     mensagem = '';
     
     let steamIds = request.cookies.amgSteamIds;
-    
+    if(!steamIds || steamIds == "") steamIds = "76561198074458381,76561198016665594,76561198069575376,76561198081399729,76561198075737081";
+
     steamIds = steamIds.replaceAll('\r\n',',');
     console.log(steamIds);
 
-    if(!steamIds || steamIds == "") steamIds = "76561198074458381,76561198016665594,76561198069575376,76561198081399729,76561198075737081";
     
     await getPlayerSummaries(steamIds).then(async res => {
         players = res.response.players.player;
