@@ -1,6 +1,9 @@
 tr(id='inv'+index onclick='showLine("'+index+'")' class='linhaHide')
     td(class='hideImg')
-        img(src=achievement.icon, class="imgConquista")
+        if player.achievements[index].achieved === 1
+            img(src=achievement.icon, class="imgConquista")
+        else 
+            img(src=achievement.icon, class="imgConquistaGray")
     td(class='hideDesc')
         span #{achievement.displayName}
 tr(id='linha'+index onclick='hideLine("'+index+'")')
